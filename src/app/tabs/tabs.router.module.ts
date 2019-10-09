@@ -16,6 +16,7 @@ const routes: Routes = [
           }
         ]
       },
+
       {
         path: 'produtos',
         children: [
@@ -25,6 +26,7 @@ const routes: Routes = [
           }
         ]
       },
+
       {
         path: 'perfil',
         children: [
@@ -38,9 +40,14 @@ const routes: Routes = [
         path: '',
         redirectTo: '/tabs/home',
         pathMatch: 'full'
-      }
+      } 
     ]
   },
+  {
+    path: '',
+    redirectTo: '/tabs/home',
+    pathMatch: 'full'
+  } 
   
 ];
 
