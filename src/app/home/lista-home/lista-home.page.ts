@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lista-home.page.scss'],
 })
 export class ListaHomePage implements OnInit {
+  
+    slideOpts = {
+      initialSlide: 1,
+      speed: 4
+
+    };
 
   constructor() { }
 

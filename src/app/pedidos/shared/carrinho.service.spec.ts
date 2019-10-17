@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
-import { SharedService } from 'src/app/home/shared/shared.service';
 
+import { CarrinhoService } from './carrinho.service';
 
-describe('SharedService', () => {
+describe('CarrinhoService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: SharedService = TestBed.get(SharedService);
+    const service: CarrinhoService = TestBed.get(CarrinhoService);
     expect(service).toBeTruthy();
   });
 });

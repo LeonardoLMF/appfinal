@@ -7,7 +7,7 @@
 <ion-content padding>
      <ion-list>
        <ion-item>
-          <ion-label>Categoria</ion-label>
+          <ion-label class="categoriaLabel">Categorias</ion-label>
         <ion-select (ionChange)="buscarProdutos()" [(ngModel)]="categoriaSelecionada">
           <ion-select-option value="" [selected]="true">Todas</ion-select-option>
           <ion-select-option *ngFor="let categoria of categorias | async" [value]="categoria.key">{{ categoria.nome }}
