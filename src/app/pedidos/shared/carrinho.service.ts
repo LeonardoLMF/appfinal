@@ -65,7 +65,6 @@ export class CarrinhoService {
 
   clear(){
   
-    
   }
 
 }
