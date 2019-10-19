@@ -14,7 +14,7 @@
           </ion-select-option>
         </ion-select>
       </ion-item>
-      <ion-item *ngFor="let produto of produtos | async" (click)="adicionarProduto(produto.key)">
+        <ion-item *ngFor="let produto of produtos | async" (click)="adicionarProduto(produto.key)">
           <ion-avatar slot="start" *ngIf="produto.img">
             <img [src]="produto.img" />
           </ion-avatar>
