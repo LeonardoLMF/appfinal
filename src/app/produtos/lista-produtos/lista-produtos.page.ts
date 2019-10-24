@@ -12,14 +12,16 @@ import { ProdutosService } from '../shared/shared.service';
 
 })
 export class ListaProdutosPage implements OnInit {
+
   produtos: Observable<any[]>;
   categorias: Observable<any[]>;
   categoriaSelecionada: string;
   carrinhoPossuiItens: boolean = false;
 
-  constructor(private router: Router,
-              private produtosService: ProdutosService,
-              private carrinhoService: CarrinhoService
+  constructor( 
+               private router: Router,
+               private produtosService: ProdutosService,
+               private carrinhoService: CarrinhoService
              ) { }
 
   ngOnInit() {

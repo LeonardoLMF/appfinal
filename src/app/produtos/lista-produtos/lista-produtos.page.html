@@ -1,7 +1,12 @@
 <ion-header>
   <ion-toolbar color="dark">
-    <ion-title ion-text-center color="amarelo">Produtos</ion-title>
+    <ion-title ion-text-center color="light">Produtos</ion-title>
   </ion-toolbar>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" *ngIf="carrinhoPossuiItens">
+      <ion-fab-button [routerLink]="['/pedido/carrinho']" color="dark">
+        <ion-icon name="cart" color="light"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
 </ion-header>
 
 <ion-content padding>
@@ -27,9 +32,4 @@
           </ion-label>
         </ion-item>
     </ion-list>
-    <ion-fab vertical="bottom" horizontal="end" slot="fixed" *ngIf="carrinhoPossuiItens">
-      <ion-fab-button [routerLink]="['/pedido/carrinho']" color="dark">
-        <ion-icon name="cart" color="amarelo"></ion-icon>
-      </ion-fab-button>
-    </ion-fab>
 </ion-content>
