@@ -1,7 +1,32 @@
-h1 {
-    text-align: center;
-}
 
 h2 {
     text-align: center;
 }
+
+ion-header {
+    height: 70px;
+    width: 100%;
+    
+    }
+    
+    ion-toolbar {
+        height: 100%;
+        
+    }
+    
+    ion-title {
+        font-size: 20px;
+        vertical-align: middle;
+        text-align: left;
+        padding-top: 15px;
+    }
+
+.imagemHome{
+    width: 150px;
+    height: 150px;
+}
+
+ion-card{
+    width: 100%;
+}
+

@@ -24,29 +24,23 @@
 <hr>
 <ion-grid text-wrap>
   <ion-row>
+     
      <ion-col>
-        <ion-card>
+       <ion-row>
+        <ion-card text-wrap *ngFor="let produto of produtos | async" (click)="adicionarProduto(produto.key)">
+           
             <ion-card-header> 
-                <ion-card-title></ion-card-title>
-                <ion-card-subtitle></ion-card-subtitle>
+                <h2><img [src]="produto.img" class="imagemHome" slot="start"></h2>
+              
             </ion-card-header>
           
             <ion-card-content>
-                           
-            </ion-card-content>
-          </ion-card>
-     </ion-col>
-     <ion-col>
-        <ion-card>
-            <ion-card-header> 
-              <ion-card-title>Card Title</ion-card-title>
-              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-            </ion-card-header>
-          
-            <ion-card-content>
-              Keep close to Nature's heart... and break clear away
+                <ion-card-title>{{ produto.nome }}</ion-card-title>
+                <ion-card-subtitle>{{ produto.preco}}</ion-card-subtitle>
+                 <h3> {{ produto.valor }} </h3>
             </ion-card-content>
         </ion-card>
+      </ion-row>
      </ion-col>
      
   </ion-row>

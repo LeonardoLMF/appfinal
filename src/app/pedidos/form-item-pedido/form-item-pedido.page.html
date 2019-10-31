@@ -8,6 +8,7 @@
 </ion-header>
 
 <ion-content padding>
+  <h2><img [src]="produto.img"/></h2>
   <h1>{{ produto.nome }}</h1>
   <pre text-wrap>{{ produto.descricao }}</pre>
   <app-valor [valor]="produto.preco"></app-valor>

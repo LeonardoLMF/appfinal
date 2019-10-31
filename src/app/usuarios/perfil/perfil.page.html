@@ -14,11 +14,13 @@
     </ion-item>
   </ion-list>
 
-  <ion-button expand="block"  fill="outline" color="warning" [routerLink]="['/usuarios/enderecos']">Meus Endereços</ion-button> 
+  <ion-button expand="block"  color="amarelinho" fill="outline" [routerLink]="['/usuarios/enderecos']">Meus Endereços</ion-button> 
+  <ion-button expand="block" color="dark"> Sobre </ion-button>
+  <br>
+  <br>
   <ion-button expand="block" color="dark" (click)="sair()">
       <ion-icon md="ios-log-out"  color="amarelo" slot="start"></ion-icon>
       Sair 
-    
-    </ion-button>
-
+  </ion-button>
+   
 </ion-content>
