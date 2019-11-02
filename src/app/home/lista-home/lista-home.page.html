@@ -4,8 +4,8 @@
     </ion-toolbar>
   </ion-header>
 
-<ion-content>
-  <h1>FSDAFSDFASD !</h1>
+<ion-content color="dark">
+  
   <ion-grid>
   <ion-slides pager="true" [options]="slideOpts">
   <ion-slide>
@@ -20,34 +20,29 @@
 </ion-slides>
  </ion-grid>
 
+ 
+<ion-row class="pdestaque">
 <h2>Produtos em Destaque</h2>
-<hr>
+</ion-row>
+
 <ion-grid text-wrap>
   <ion-row>
-     
-     <ion-col>
-       <ion-row>
-        <ion-card text-wrap *ngFor="let produto of produtos | async" (click)="adicionarProduto(produto.key)">
-           
-            <ion-card-header> 
-                <h2><img [src]="produto.img" class="imagemHome" slot="start"></h2>
+     <ion-col size="6" *ngFor="let produto of produtos | async" (click)="adicionarProduto(produto.key)">
+          <ion-card>
+
+              <ion-card-header>
+                  <ion-card-subtitle><img [src]="produto.img" class="imagemHome"></ion-card-subtitle>
+                  <ion-card-title>{{produto.nome}}</ion-card-title>
+              </ion-card-header>
               
-            </ion-card-header>
-          
-            <ion-card-content>
-                <ion-card-title>{{ produto.nome }}</ion-card-title>
-                <ion-card-subtitle>{{ produto.preco}}</ion-card-subtitle>
-                 <h3> {{ produto.valor }} </h3>
-            </ion-card-content>
-        </ion-card>
-      </ion-row>
-     </ion-col>
-     
+              <ion-card-content>
+                  {{produto.descricao}}
+              </ion-card-content>
+                
+          </ion-card>
+      </ion-col>   
+      
   </ion-row>
-
-  
- 
-
  
 
 </ion-grid>
