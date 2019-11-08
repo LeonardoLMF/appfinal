@@ -45,6 +45,24 @@ const routes: Routes = [
   },
 
   {
+    path: 'usuarios',
+    children: [
+      {
+        path: 'enderecos',
+        loadChildren: '../enderecos/lista-endereco/lista-endereco.module#ListaEnderecoPageModule'
+      },
+      {
+        path: 'enderecos/novo',
+        loadChildren: '../enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule'
+      },
+      {
+        path: 'enderecos/editar/:key',
+        loadChildren: '../enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule'
+      }
+    ]
+  },  
+
+  {
     path: 'pedido',
     children: [
       {

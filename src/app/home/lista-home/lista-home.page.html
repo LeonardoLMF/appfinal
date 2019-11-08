@@ -29,22 +29,18 @@
   <ion-row>
      <ion-col size="6" *ngFor="let produto of produtos | async" (click)="adicionarProduto(produto.key)">
           <ion-card>
-
             <ion-card-header>
                 <ion-card-subtitle><img [src]="produto.img" class="imagemHome"></ion-card-subtitle>
 
                         <ion-row>
                               <ion-card-title>{{produto.nome}}</ion-card-title>
                         </ion-row>
+                        <br>
+                        <ion-row class="precoEs">
+                          <app-valor [valor]="produto.preco"></app-valor>
+                       </ion-row>
 
-            </ion-card-header>
-              <ion-card-content>
-
-                <ion-row class="precoEs">
-                  <app-valor [valor]="produto.preco"></app-valor>
-               </ion-row>
-
-              </ion-card-content>        
+            </ion-card-header>     
           </ion-card>
       </ion-col>   
       

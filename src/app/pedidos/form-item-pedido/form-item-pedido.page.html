@@ -3,15 +3,15 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Adicionando novo produto</ion-title>
+    <ion-title>Comprar Novo Produto</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <h2><img [src]="produto.img"/></h2>
-  <h1>{{ produto.nome }}</h1>
+  <h2><img  class="img-responsive" [src]="produto.img"/></h2>
+  <h1 text-bold>{{ produto.nome }}</h1>
   <pre text-wrap>{{ produto.descricao }}</pre>
-  <app-valor [valor]="produto.preco"></app-valor>
+  <h5><app-valor [valor]="produto.preco"></app-valor></h5>
 
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
@@ -38,13 +38,13 @@
     </ion-item>
       
     <ion-item>
-      <ion-label position="stacked">Observação</ion-label>
+      <ion-label position="stacked">Observação: </ion-label>
       <ion-textarea formControlName="observacao"></ion-textarea>
     </ion-item>
 
-    <ion-item text-end>
+    <ion-item text-center>
       <ion-label>
-        <h2>Total: <app-valor [valor]="total"></app-valor></h2>
+        <h2>Total : <app-valor [valor]="total"></app-valor></h2>
       </ion-label>
     </ion-item>
 

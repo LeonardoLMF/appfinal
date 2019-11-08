@@ -21,12 +21,14 @@
       </ion-item>
         <ion-item *ngFor="let produto of produtos | async" (click)="adicionarProduto(produto.key)">
           <img [src]="produto.img" slot="start" *ngIf="produto.img" class="imagemFoto"/>
+          
           <ion-label text-wrap>
             <h1>{{ produto.nome }}</h1>
             <h2>{{ produto.categoriaNome }}</h2>
-            <pre text-wrap>{{ produto.descricao }}</pre>
+            <p>{{ produto.descricao }}</p><br>
             <!-- <span>{{ produto.preco | currency:'BRL' }}</span> -->
              <app-valor [valor]="produto.preco"></app-valor>
+             
           </ion-label>
         </ion-item>
     </ion-list>
