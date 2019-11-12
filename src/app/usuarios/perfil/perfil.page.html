@@ -11,17 +11,16 @@
        {{ user.name }}
        <br>
        <br>
-       <h2>{{ user.email }} </h2>
     </h1>
   </section>
- 
-  <ion-button expand="block"  color="amarelinho" [routerLink]="['/usuarios/enderecos']">Meus Endereços</ion-button> 
-  <ion-button expand="block" color="dark"> Sobre </ion-button>
+  <ion-button expand="block" color="danger"> Pedidos </ion-button>
+  <ion-button expand="block" color="medium" [routerLink]="['/usuarios/enderecos']">Meus Endereços</ion-button> 
+  <ion-button expand="block" color="medium" [routerLink]="['/pedido/forma-pagamento']"> Sobre </ion-button>
   <br>
   <br>
   <ion-button expand="block" color="dark" (click)="sair()">
-   <ion-icon class="eaemn" md="ios-log-out"  color="gold" slot="start"></ion-icon>
-      Sair 
+  <ion-icon class="eaemn" md="ios-log-out"  color="gold" slot="start"></ion-icon>
+   Sair 
   </ion-button>
    
    
